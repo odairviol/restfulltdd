@@ -28,7 +28,6 @@ public class BookRepositoryTest {
 	@DisplayName("Deve retornar verdade quando existir um livro na base com o isbn informado")
 	public void returnTrueWhenIsbnExists() {
 		// Cenario
-		
 		String isbn = "123";
 		Book book = Book.builder().title("Aventuras").author("Fulano").isbn(isbn).build();
 		entityManager.persist(book);

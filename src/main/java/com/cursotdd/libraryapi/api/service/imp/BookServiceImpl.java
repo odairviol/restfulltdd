@@ -1,5 +1,7 @@
 package com.cursotdd.libraryapi.api.service.imp;
 
+import java.util.Optional;
+
 import org.springframework.stereotype.Service;
 
 import com.cursotdd.libraryapi.api.service.BookService;
@@ -22,6 +24,16 @@ public class BookServiceImpl implements BookService {
 			throw new  BusinessException("Isbn já cadastrado");
 		}
 		return respository.save(book);
+	}
+
+	@Override
+	public Optional<Book> getById(Long id) {
+		return Optional.empty();
+	}
+	
+	@Override
+	public void delete(Book book) {
+		// TODO Auto-generated method stub
 	}
 
 }
